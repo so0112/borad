@@ -5,14 +5,13 @@ import useFetch from "../hooks/useFetch";
 
 function Day() {
     // useParams는 string 타입으로 값을 가져오기때문에 Number로 이용시에는 타입변환 필요
-    const { day } = useParams();
     // const wordList = dummy.words.filter(word => {
     //     return (
     //         word.day === parseInt(day)
     //     );
     // });
 
-    const words = useFetch(`http://localhost:3001/words?day=${day}`)
+    const words = useFetch(`http://localhost:3001/words?`)
 
     // useFetch 로 대체된 값
 
@@ -31,7 +30,6 @@ function Day() {
 
     return (
         <>
-            <h2>Day {day}</h2>
             <table>
                 <tbody>
                     {words.map(word => {
