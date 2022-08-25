@@ -1,3 +1,6 @@
+/**추가 import */
+import { useNavigate } from "react-router-dom";
+
 import styled from "styled-components";
 import { useRef } from "react";
 
@@ -43,17 +46,44 @@ const WriteTemplate = styled.div`
   }
 `;
 
+
+
 function WriteForm() {
+
+  const navigate = useNavigate();
+
   const titleRef = useRef(null);
   const bodyRef = useRef(null);
 
   function onSubmit(e) {
-    // 현재 Ref의 값 확인용
-    console.log("title 내용 : ", titleRef.current.value);
-    console.log("body 내용 : ", bodyRef.current.value);
 
-    // form 제출시 새로고침 방지
+    // 현재 Ref의 값 확인용
+    // console.log(engRef.current.value);
+    // console.log(korRef.current.value);
+    // console.log(dayRef.current.value);
+
+    // form 작성시 새로고침 방지
     e.preventDefault();
+
+    fetch(`http://localhost:3001/posting`, {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        body: titleRef.current.value,
+        body2: bodyRef.current.value,
+        vote: 0,
+        answer: 0,
+        views: 0,
+        nickname: ''
+      }),
+    }).then(res => {
+      if (res.ok) {
+        alert("생성 완료")
+        navigate(`/`)
+      }
+    })
   }
 
   return (

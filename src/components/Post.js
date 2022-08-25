@@ -1,45 +1,23 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
 
 const Post = () => {
-  const [datas, setDatas] = useState([
-    {
-      id: 3,
-      vote: 2,
-      answer: 0,
-      views: 11,
-      body: "Is there a way to transform these 2 arrays by using jq",
-      nickname: "skeleton_mouse",
-    },
-    {
-      id: 2,
-      vote: 0,
-      answer: 1,
-      views: 5,
-      body: "How to update cache in PWA",
-      nickname: "mmh4all",
-    },
-    {
-      id: 1,
-      vote: 1,
-      answer: 0,
-      views: 15,
-      body: "The PushSubscription object differs in the documentation",
-      nickname: "Daniel Tanase",
-    },
-  ]);
+
+  // json 서버 port 3001
+  const datas = useFetch('http://localhost:3001/posting')
 
   const onInterestingClick = () => {
     let newData = [...datas];
     newData.sort((a, b) => (a.id < b.id ? 1 : -1));
-    setDatas(newData);
+    // setDatas(newData);
   };
 
   const onHotClick = () => {
     let newData = [...datas];
     newData.sort((a, b) => (a.vote < b.vote ? 1 : -1));
-    setDatas(newData);
+    // setDatas(newData);
   };
 
   return (
