@@ -1,30 +1,17 @@
-import DayList from "./component/DayList";
-import Header from "./component/Header";
-import Day from "./component/Day";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Post from "./components/Post";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import EmptyPage from "./component/EmptyPage";
-import CreateWord from "./component/CreateWord";
+import WriteForm from "./components/WriteForm.js";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Header />
-
+      <div>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<DayList />}>
-          </Route>
-
-          <Route path="/day/:day" element={<Day />}>
-          </Route>
-
-          <Route path="/create_word" element={<CreateWord />}>
-          </Route>
-
-
-          <Route path="*" element={<EmptyPage />}>
-          </Route>
-
+          <Route path="/" element={<Post />}></Route>
+          <Route path="/create_write" element={<WriteForm />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
