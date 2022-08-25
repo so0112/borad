@@ -4,16 +4,12 @@ function Header() {
     return (
         <div className="header">
             <h1>
-                <Link to="/"> 영단어 </Link>
+                <Link to="/"> 게시판 nav </Link>
             </h1>
 
             <div className="menu">
                 <Link to="/create_word" className="link">
-                    단어 추가
-                </Link>
-
-                <Link to="/create_day" className="link">
-                    Day 추가
+                    게시글 작성
                 </Link>
             </div>
         </div>

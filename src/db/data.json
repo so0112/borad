@@ -54,8 +54,22 @@
       "day": "1",
       "eng": "word",
       "kor": "단어",
-      "isDone": true,
+      "isDone": false,
       "id": 7
+    },
+    {
+      "day": "1",
+      "eng": "",
+      "kor": "",
+      "isDone": false,
+      "id": 8
+    },
+    {
+      "day": "1",
+      "eng": "",
+      "kor": "",
+      "isDone": false,
+      "id": 9
     }
   ]
 }
