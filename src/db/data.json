@@ -1,0 +1,23 @@
+{
+  "days": [
+    {
+      "id": 1,
+      "day": 1
+    }
+  ],
+  "words": [
+    {
+      "day": "1",
+      "eng": "타이틀",
+      "kor": "바디",
+      "isDone": false,
+      "id": 8
+    },
+    {
+      "eng": "asd",
+      "kor": "asd",
+      "day": 1,
+      "id": 9
+    }
+  ]
+}
