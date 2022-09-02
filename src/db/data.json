@@ -1,8 +1,82 @@
 {
-  "posting": [
+  "days": [
     {
-      "title": "",
-      "content": ""
+      "id": 1,
+      "day": 1
+    },
+    {
+      "id": 2,
+      "day": 2
+    },
+    {
+      "id": 3,
+      "day": 3
+    },
+    {
+      "day": 4,
+      "id": 4
+    },
+    {
+      "day": 5,
+      "id": 5
+    }
+  ],
+  "words": [
+    {
+      "id": 3,
+      "day": 2,
+      "eng": "car",
+      "kor": "자동차",
+      "isDone": false
+    },
+    {
+      "id": 4,
+      "day": 2,
+      "eng": "pen",
+      "kor": "펜 ",
+      "isDone": false
+    },
+    {
+      "id": 5,
+      "day": 3,
+      "eng": "school",
+      "kor": "학교",
+      "isDone": false
+    },
+    {
+      "id": 6,
+      "day": 3,
+      "eng": "pencil",
+      "kor": "연필",
+      "isDone": false
+    },
+    {
+      "day": "1",
+      "eng": "word",
+      "kor": "단어",
+      "isDone": false,
+      "id": 7
+    },
+    {
+      "day": "1",
+      "eng": "asd",
+      "kor": "asd",
+      "isDone": false,
+      "id": 8
+    },
+    {
+      "day": "1",
+      "eng": "",
+      "kor": "",
+      "isDone": false,
+      "id": 9
+    },
+    {
+      "day": "1",
+      "eng": "",
+      "kor": "",
+      "isDone": false,
+      "id": 10
     }
   ]
 }
